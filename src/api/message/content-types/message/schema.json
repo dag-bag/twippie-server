@@ -15,15 +15,11 @@
     "content": {
       "type": "text"
     },
-    "sender": {
+    "sender_id": {
       "type": "string"
     },
-    "receiver": {
+    "conversation_id": {
       "type": "string"
-    },
-    "readed": {
-      "type": "boolean",
-      "default": false
     }
   }
 }

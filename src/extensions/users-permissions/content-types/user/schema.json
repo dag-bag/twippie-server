@@ -87,6 +87,22 @@
       "relation": "oneToMany",
       "target": "api::post.post",
       "mappedBy": "user"
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "education": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.education"
+    },
+    "work": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.work"
     }
   }
 }
