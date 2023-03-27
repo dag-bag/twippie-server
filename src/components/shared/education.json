@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_educations",
+  "info": {
+    "displayName": "education"
+  },
+  "options": {},
+  "attributes": {
+    "school": {
+      "type": "enumeration",
+      "enum": [
+        "High school",
+        "Bachelor's degree",
+        "Master's degree",
+        "PhD degree"
+      ]
+    },
+    "year": {
+      "type": "integer"
+    }
+  }
+}

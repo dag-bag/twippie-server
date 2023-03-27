@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_likes",
+  "info": {
+    "displayName": "like"
+  },
+  "options": {},
+  "attributes": {
+    "user_id": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "like"
+      ],
+      "default": "like"
+    }
+  }
+}

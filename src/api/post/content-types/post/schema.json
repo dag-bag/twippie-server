@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "caption": {
+      "type": "text"
+    },
+    "content": {
+      "type": "json"
+    },
+    "shares": {
+      "type": "integer",
+      "default": 0
+    },
+    "boosted_post": {
+      "type": "boolean"
+    },
+    "mentions": {
+      "type": "json"
+    },
+    "audience": {
+      "type": "enumeration",
+      "enum": [
+        "private",
+        "public",
+        "friends"
+      ]
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "posts"
+    },
+    "hashtags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.hashtags"
+    },
+    "likes": {
+      "displayName": "like",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.like"
+    }
+  }
+}
