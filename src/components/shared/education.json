@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_educations",
   "info": {
-    "displayName": "education"
+    "displayName": "education",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -15,7 +16,7 @@
       ]
     },
     "year": {
-      "type": "integer"
+      "type": "biginteger"
     }
   }
 }

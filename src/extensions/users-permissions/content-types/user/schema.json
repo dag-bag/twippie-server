@@ -73,12 +73,6 @@
       "type": "boolean",
       "default": false
     },
-    "user_profile": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::user-profile.user-profile",
-      "inversedBy": "user"
-    },
     "image": {
       "type": "json"
     },
@@ -98,6 +92,15 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.education"
+    },
+    "notifications": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::notification.notification",
+      "mappedBy": "recipient_id"
+    },
+    "bio": {
+      "type": "text"
     },
     "work": {
       "type": "component",

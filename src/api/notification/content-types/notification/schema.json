@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "notifications",
+  "info": {
+    "singularName": "notification",
+    "pluralName": "notifications",
+    "displayName": "Notification",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "text": {
+      "type": "text"
+    },
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "new_post",
+        "mention",
+        "message",
+        "update",
+        "follows",
+        "likes",
+        "reaction",
+        "comment",
+        "comment_like",
+        "reply_comment"
+      ],
+      "required": true
+    },
+    "url": {
+      "type": "text"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    },
+    "recipient_id": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "notifications"
+    }
+  }
+}
