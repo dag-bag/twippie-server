@@ -15,6 +15,7 @@
     "text": {
       "type": "text"
     },
+    "username": {
       "type": "string"
     },
     "type": {
