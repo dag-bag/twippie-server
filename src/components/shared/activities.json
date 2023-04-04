@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_activities",
+  "info": {
+    "displayName": "Activities"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "blessed",
+        "happy",
+        "loved",
+        "sad",
+        "lovely",
+        "excited",
+        "thankful",
+        "celebrating",
+        "watching",
+        "eating",
+        "drinking",
+        "travelling to"
+      ]
+    }
+  }
+}

@@ -73,9 +73,6 @@
       "type": "boolean",
       "default": false
     },
-    "image": {
-      "type": "json"
-    },
     "posts": {
       "type": "relation",
       "relation": "oneToMany",
@@ -106,6 +103,9 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.work"
+    },
+    "image": {
+      "type": "text"
     }
   }
 }

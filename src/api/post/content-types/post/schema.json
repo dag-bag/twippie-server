@@ -23,7 +23,8 @@
       "default": 0
     },
     "boosted_post": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     },
     "mentions": {
       "type": "json"
@@ -52,6 +53,12 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.like"
+    },
+    "activity_feeling": {
+      "displayName": "Activities",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.activities"
     }
   }
 }

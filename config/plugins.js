@@ -1,4 +1,39 @@
 module.exports = ({ env }) => ({
+  comments: {
+    enabled: true,
+    config: {
+      badWords: false,
+      moderatorRoles: ["Authenticated"],
+      approvalFlow: ["api::post.post"],
+      entryLabel: {
+        "*": ["Title", "title", "Name", "name", "Subject", "subject"],
+        "api::post.post": ["MyField"],
+      },
+      blockedAuthorProps: ["name", "email"],
+      reportReasons: {
+        MY_CUSTOM_REASON: "MY_CUSTOM_REASON",
+      },
+      gql: {
+        // ...
+      },
+    },
+  },
+  upload: {
+    provider: "bunnystorage",
+    providerOptions: {
+      storageHost: env("BUNNYSTORAGE_STORAGE_HOST"),
+      storageZone: env("BUNNYSTORAGE_STORAGE_ZONE"),
+      pullZone: env("BUNNYSTORAGE_PULL_ZONE"),
+      storageFolder: env("BUNNYSTORAGE_STORAGE_FOLDER", null),
+      storageApiKey: env("BUNNYSTORAGE_STORAGE_API_KEY"),
+      videostreamLibraryId: env("BUNNYSTORAGE_VIDEOSTREAM_LIBRARY_ID"),
+      videostreamApiKey: env("BUNNYSTORAGE_VIDEOSTREAM_API_KEY"),
+      videostreamCollectionId: env(
+        "BUNNYSTORAGE_VIDEOSTREAM_COLLECTION_ID",
+        null
+      ),
+    },
+  },
   seo: {
     enabled: true,
   },
@@ -7,20 +42,20 @@ module.exports = ({ env }) => ({
       jwtSecret: env("JWT_SECRET"),
     },
   },
-  upload: {
-    config: {
-      provider: "cloudinary",
-      providerOptions: {
-        cloud_name: env("CLOUDINARY_NAME"),
-        api_key: env("CLOUDINARY_KEY"),
-        api_secret: env("CLOUDINARY_SECRET"),
-      },
-      actionOptions: {
-        upload: {},
-        delete: {},
-      },
-    },
-  },
+  // upload: {
+  //   config: {
+  //     provider: "cloudinary",
+  //     providerOptions: {
+  //       cloud_name: env("CLOUDINARY_NAME"),
+  //       api_key: env("CLOUDINARY_KEY"),
+  //       api_secret: env("CLOUDINARY_SECRET"),
+  //     },
+  //     actionOptions: {
+  //       upload: {},
+  //       delete: {},
+  //     },
+  //   },
+  // },
   io: {
     enabled: true,
     config: {
