@@ -1,4 +1,13 @@
 module.exports = ({ env }) => ({
+  "video-field": {
+    enabled: true,
+  },
+  "cookie-manager": {
+    enabled: true,
+    config: {
+      localization: true,
+    },
+  },
   comments: {
     enabled: true,
     config: {

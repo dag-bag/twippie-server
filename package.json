@@ -10,6 +10,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "@sklinet/strapi-plugin-video-field": "^1.0.4",
     "@strapi/plugin-i18n": "4.5.5",
     "@strapi/plugin-seo": "^1.8.0",
     "@strapi/plugin-users-permissions": "4.5.5",
@@ -17,8 +18,11 @@
     "@strapi/strapi": "4.5.5",
     "pg": "^8.9.0",
     "strapi-plugin-comments": "^2.2.9",
+    "strapi-plugin-cookie-manager": "^1.0.8",
     "strapi-plugin-entity-relationship-chart": "^4.1.0",
     "strapi-plugin-io": "^1.1.4",
+    "strapi-plugin-meilisearch": "^0.9.1",
+    "strapi-plugin-rest-cache": "^4.2.7",
     "strapi-provider-upload-bunnystorage": "^1.0.2"
   },
   "author": {
