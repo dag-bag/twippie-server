@@ -15,7 +15,16 @@ module.exports = ({ env }) => ({
       moderatorRoles: ["Authenticated"],
       approvalFlow: ["api::post.post"],
       entryLabel: {
-        "*": ["Title", "title", "Name", "name", "Subject", "subject"],
+        "*": [
+          "Title",
+          "title",
+          "Name",
+          "name",
+          "Subject",
+          "subject",
+          "Like",
+          "like",
+        ],
         "api::post.post": ["MyField"],
       },
       blockedAuthorProps: ["name", "email"],
